@@ -1,0 +1,30 @@
+
+img{
+    background-color: #E5E5E5;
+}
+*{
+    margin: 0;
+    padding: 0;
+    background: #E5E5E5;
+    font-family: "intern" sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;  
+
+
+}
+#div_desencriptar{
+
+    background-color: #FFFFFF;
+    
+}
+.main{
+    display: flex;
+
+}
+
+
+#text-area1 {
+background-color: #E5E5E5;
+
+}
