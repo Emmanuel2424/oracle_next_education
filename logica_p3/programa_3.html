@@ -19,10 +19,27 @@
 
     function exibirAlerta(evento){
 console.log(evento);
+var x = evento.pageX - pantalla.offsetLeft;
+var y = evento.PageY - pantalla.offsetTop;
 alert("se hizo un clic en canvas");
+alert(x +","+ y);
 
     }
-    pantalla.onclick= exibirAlerta;
+
+    function dibujarCirculo (evento){
+
+var x = evento.pageX - pantalla.offsetLeft;
+var y = evento.PageY - pantalla.offsetTop;
+
+pincel.fillStyle = "blue";
+
+pincel.arc(x,y,10,0,2*3.14);
+pincel.fill();
+console.log(x +","+ y);
+
+    }
+    //pantalla.onclick= exibirAlerta;
+    pantalla.onclick = dibujarCirculo;
 
  </script>
 </body>
