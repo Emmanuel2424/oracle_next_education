@@ -32,8 +32,8 @@
             var y = evento.pageY - pantalla.offsetTop;
 
             pincel.fillStyle = "blue";
-            pincel.beginPath();
-            pincel.arc(x, y, 10, 0, 2 * 3.14);
+            pincel.beginPath(); // vamos a empezar a trabajar
+            pincel.arc(x, y, 10, 0, 2 * 3.14); //radio, angulo inicial, pi
             pincel.fill();
             console.log(x + "," + y);
 
