@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <canvas width="600" height="400"></canvas>
 
     <script>
-      var pantalla = document.querySelector("canvas");
-      var pincel = pantalla.getContext("2d");
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
 
-      pincel.fillStyle = "grey";
+        pincel.fillStyle = "grey";
         pincel.fillRect(0, 0, 600, 400);
         //funcion Dibujar circunferencia
 
-   function disenarCircunferencia(x, y,radio){
-            pincel.fillStyle = "blue";
-            pincel.beginPath();
+        function disenarCircunferencia(x, y, radio) {
+            pincel.fillStyle = "red";
+            pincel.beginPath(); // comenzar a graficar
             pincel.arc(x, y, radio, 0, 2 * Math.PI);
-            pincel.fill();
-
+            pincel.fill(); // pinta
 
         }
 
-        disenarCircunferencia(20, 20, 10);
+        function limpiarPantalla() {
+            pincel.clearRect(0, 0, 600, 400); // aqui se limpia la pantalla 
+        }
+        var x = 0;
+
+        function actualizarPantalla() {
+            limpiarPantalla();
+            disenarCircunferencia(x, 20, 10);
+            x++;
+        }
+
+        setInterval(actualizarPantalla, 5); // se llama a la funcion y despues de la coma son milisegundos
 
     </script>
-  </body>
+</body>
+
 </html>
