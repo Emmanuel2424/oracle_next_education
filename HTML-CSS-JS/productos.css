@@ -37,15 +37,24 @@ text-decoration: none;
     text-align: center;
     width: 30%;
     vertical-align: top;
-    background: #CCCCCC;/*solo nos ayudara a visualizar*/
+   /* background: #CCCCCC;solo nos ayudara a visualizar*/
     margin: 0 1.5%;
     padding: 30px 20px;
     box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    
+
 
 }
 .productos h2{
     font-size: 30px;
     font-weight: bold;
+}
+
+.productos li:hover h2{
+
+    font-size: 33px;
 }
 .productos-precio {
 font-size: 20px;
@@ -55,4 +64,26 @@ margin-top: 10px;
 
 .productos-descripcion {
     font-size: 18px;
+}
+nav a:hover {
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+.productos li:hover{
+border-color: #c78c19;
+
+}
+.productos li:active {
+    border-color: #088c19;
+}
+footer {
+    text-align: center;
+    background: url(images/bg.jpg);
+    padding: 40px;
+}
+.copyright{
+    color: #ffffff;
+    font-size: 13px;
+    margin: 20px;
 }
